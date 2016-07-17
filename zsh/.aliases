@@ -1,12 +1,12 @@
-alias ls="ls -lha"
+alias ls="ls -lha --color=auto"
 alias gs='git status'
-alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias htpc='ssh htpc@htpc.local'
 
-export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
-PERL_MB_OPT="--install_base \"/Users/jonathanbruno/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/jonathanbruno/perl5"; export PERL_MM_OPT;
 alias sshweb='ssh -p 2222 enim@192.232.249.141'
 alias sshwork='ssh jbruno@jbruno.office.mbira.com'
-alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias dwh3='ssh -i ~/.ssh/work_rsa jbruno@dwh3.chidc.mbira.com'
+
+
+connect_vpn() {
+    cd ~/vpnconfigs/jbruno.tblk/ && sudo openvpn mbiraVPN.conf
+}

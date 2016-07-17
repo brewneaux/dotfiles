@@ -7,6 +7,7 @@ set nocompatible
     call vundle#begin()
 
     " BUNDLES {
+        Bundle 'vim-airline/vim-airline-themes'
         Bundle 'scrooloose/nerdtree'
         Bundle 'altercation/vim-colors-solarized'
         Bundle 'spf13/vim-colors'
