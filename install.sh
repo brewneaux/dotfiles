@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # install script
+dotfiles_dir=$(dirname $0)
+echo "Installing from $dotfiles_dir"
+
 
 sudo rm -rf ~/.vim > /dev/null 2>&1
 sudo rm -rf ~/.vimrc > /dev/null 2>&1
