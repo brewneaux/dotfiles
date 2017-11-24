@@ -71,25 +71,7 @@ build_git_prompt_section() {
 }
 
 
-# Get battery stats ..... nanananananana
-batstats(){
-    bat_display=''
-    integer charge_level=$(acpi -b | awk '{print $4}' | sed s/%,//g)
-    case $(acpi -b | awk '{print $3}' | grep -ci dis) in
-        1)
-            if (( $charge_level < 20 )); then
-                bat_display+="%{$fg[red]%}!!!v"
-            else
-                bat_display+="%{$fg[red]%}v"
-            fi
-            ;;
-        *)
-            bat_display+="%{$fg[green]%}^"
-    esac
-  
 
-    print "${bat_display}${charge_level}%{$reset_color%}"
-}
 
 PS1="%{$fg[red]%}local%{$reset_color%} @ %{$fg[blue]%}%0/ %{$FG[248]%}% : "
 PS1+='$(build_git_prompt_section)'
@@ -97,11 +79,8 @@ PS1+="
  $ %{$reset_color%}% "
 
 
-
-RPROMPT='[$(batstats)]'
-
 function zle-line-init zle-keymap-select {
-    RPS1="[$(batstats)] ${${KEYMAP/vicmd/N}/(main|viins)/I}"
+    RPS1="${${KEYMAP/vicmd/N}/(main|viins)/I}"
     RPS2=$RPS1
 
     zle reset-prompt
