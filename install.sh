@@ -2,14 +2,12 @@
 
 # install script
 
-here=$(dirname $0)
+ln -s zsh/.zshrc ~/.zshrc
 
-ln -s $here/zsh/.zshrc ~/.zshrc
+ln -s .vim ~/.vim
 
-ln -s $here/.vim ~/.vim
+ln -s dircolors-solarized ~/dircolors-solarized
 
-ln -s $here/dircolors-solarized ~/dircolors-solarized
+ln -s tmux/.tmux.conf ~/.tmux.conf
 
-ln -s $here/tmux/.tmux.conf ~/.tmux.conf
-
-ln -s $here/vim/.vimrc ~/.vimrc 
+ln -s vim/.vimrc ~/.vimrc 
