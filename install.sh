@@ -27,4 +27,4 @@ ln -sf $dotfiles_dir/.vim ~/.vim
 ln -sf $dotfiles_dir/vim/.vimrc ~/.vimrc
 ln -sf $dotfiles_dir/tmux/.tmux.conf ~/.tmux.conf
 ln -sf $dotfiles_dir/zsh/zsh_completion ~/zsh_completion
-ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
+ln -sf $dotfiles_dir/zsh/.zshrc ~/.zshrc
