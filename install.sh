@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install script
-dotfiles_dir=$(dirname $0)
+dotfiles_dir="$( cd "$(dirname "$0")" ; pwd -P )"
 echo "Installing from $dotfiles_dir"
 
 
