@@ -34,7 +34,7 @@ bindkey -v
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**'
 zstyle ':completion:*' max-errors 4
-zstyle :compinstall filename '/Users/jonathanbruno/dotfiles/zsh/zsh_completion'
+zstyle :compinstall filename '~/dotfiles/zsh/zsh_completion'
 
 autoload -Uz compinit
 compinit
@@ -73,7 +73,7 @@ build_git_prompt_section() {
 
 
 
-PS1="%{$fg[red]%}local%{$reset_color%} @ %{$fg[blue]%}%0/ %{$FG[248]%}% : "
+PS1="%{$fg[red]%}local%{$reset_color%} @ %{$fg[DarkTurquoise]%}%0/ %{$FG[248]%}% : "
 PS1+='$(build_git_prompt_section)'
 PS1+="
  $ %{$reset_color%}% "
